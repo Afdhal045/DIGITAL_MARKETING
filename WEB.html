@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Kopi Afdhal — Kopi susu botolan premium dengan rasa enak dan harga bersahabat. Cocok untuk mahasiswa, anak muda, dan pekerja." />
+  <meta name="keywords"
+    content="kopi afdhal, kopi susu botolan, kopi murah, kopi susu gula aren, kopi susu caramel, kopi susu hazelnut, kopi hitam" />
+  <meta property="og:title" content="Kopi Afdhal — Kopi Enak, Harga Bersahabat" />
+  <meta property="og:description"
+    content="Kopi susu botolan premium yang praktis, enak, dan terjangkau untuk menemani aktivitasmu." />
+  <title>Kopi Afdhal — Kopi Enak, Harga Bersahabat.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --coffee: #3b1f0e;
+      --coffee-mid: #6b3a1f;
+      --coffee-light: #a0652a;
+      --caramel: #c8882a;
+      --cream: #f5efe6;
+      --cream-dark: #ede0cc;
+      --beige: #f9f5f0;
+      --white: #ffffff;
+      --text-dark: #1a1109;
+      --text-mid: #4a3728;
+      --text-light: #8c7060;
+      --shadow-sm: 0 2px 12px rgba(59, 31, 14, .08);
+      --shadow-md: 0 8px 30px rgba(59, 31, 14, .12);
+      --shadow-lg: 0 16px 48px rgba(59, 31, 14, .18);
+      --radius: 14px;
+      --radius-lg: 24px;
+      --transition: all .35s cubic-bezier(.4, 0, .2, 1);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--beige);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-pad {
+      padding: 96px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--coffee);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--coffee);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(59, 31, 14, .30);
+    }
+
+    .btn-primary:hover {
+      background: var(--coffee-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(59, 31, 14, .35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--coffee);
+      border: 2px solid var(--coffee);
+    }
+
+    .btn-outline:hover {
+      background: var(--coffee);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .delay-1 {
+      transition-delay: .1s !important;
+    }
+
+    .delay-2 {
+      transition-delay: .2s !important;
+    }
+
+    .delay-3 {
+      transition-delay: .3s !important;
+    }
+
+    .delay-4 {
+      transition-delay: .4s !important;
+    }
+
+    .delay-5 {
+      transition-delay: .5s !important;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: var(--transition);
+    }
+
+    #navbar.scrolled {
+      background: rgba(245, 239, 230, .96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 0;
+      box-shadow: 0 2px 24px rgba(59, 31, 14, .10);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--coffee);
+      letter-spacing: .04em;
+    }
+
+    .nav-logo-tag {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--caramel);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--coffee);
+      background: var(--cream-dark);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--coffee);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--coffee-mid);
+      transform: translateY(-1px);
+    }
+
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      cursor: pointer;
+    }
+
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--coffee);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .nav-burger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-burger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(245, 239, 230, .98);
+      backdrop-filter: blur(16px);
+      padding: 16px 24px 24px;
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      padding: 14px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-mid);
+      border-bottom: 1px solid var(--cream-dark);
+      transition: var(--transition);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--coffee);
+      padding-left: 8px;
+    }
+
+    /* HERO */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2a1208 0%, #3b1f0e 40%, #6b3a1f 100%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: .04;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+      padding: 60px 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .15);
+      padding: 8px 16px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge span {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--caramel);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.4);
+      }
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-title .accent {
+      color: var(--caramel);
+      font-style: italic;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 20px;
+      opacity: .9;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: rgba(245, 239, 230, .75);
+      max-width: 440px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btns .btn-gold {
+      background: var(--caramel);
+      color: var(--white);
+      box-shadow: 0 6px 24px rgba(200, 136, 42, .4);
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: .95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .hero-btns .btn-gold:hover {
+      background: #e09a30;
+      transform: translateY(-2px);
+    }
+
+    .hero-btns .btn-ghost {
+      color: var(--cream);
+      border: 2px solid rgba(245, 239, 230, .4);
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: .95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .hero-btns .btn-ghost:hover {
+      background: rgba(245, 239, 230, .12);
+      color: var(--white);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--caramel);
+    }
+
+    .hero-stat-label {
+      font-size: .75rem;
+      color: rgba(245, 239, 230, .6);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 2px;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-blob {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(200, 136, 42, .18) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(40px);
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      z-index: 2;
+      animation: floatBottle 4s ease-in-out infinite;
+    }
+
+    @keyframes floatBottle {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-18px);
+      }
+    }
+
+    .hero-img-wrap img {
+      width: 320px;
+      max-width: 100%;
+      border-radius: 20px;
+      filter: drop-shadow(0 30px 60px rgba(0, 0, 0, .5));
+    }
+
+    .coffee-bean {
+      position: absolute;
+      opacity: .15;
+      animation: rotateSlow 12s linear infinite;
+      pointer-events: none;
+    }
+
+    .coffee-bean svg {
+      fill: rgba(200, 136, 42, .4);
+    }
+
+    @keyframes rotateSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .bean-1 {
+      top: 12%;
+      right: 5%;
+      font-size: 3rem;
+      animation-duration: 15s;
+    }
+
+    .bean-2 {
+      bottom: 18%;
+      left: 8%;
+      font-size: 1.5rem;
+      animation-duration: 10s;
+      animation-direction: reverse;
+    }
+
+    .bean-3 {
+      top: 55%;
+      right: 12%;
+      font-size: 1rem;
+      animation-duration: 8s;
+    }
+
+    /* ABOUT */
+    #about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-bg {
+      position: absolute;
+      inset: -16px -16px 16px 16px;
+      background: var(--cream-dark);
+      border-radius: var(--radius-lg);
+      z-index: 0;
+    }
+
+    .about-img-main {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      object-fit: cover;
+      aspect-ratio: 4/5;
+    }
+
+    .about-badge-float {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      z-index: 2;
+      background: var(--coffee);
+      color: var(--white);
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-badge-float .big-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--caramel);
+      display: block;
+    }
+
+    .about-badge-float .small-text {
+      font-size: .75rem;
+      opacity: .8;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .about-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .value-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--beige);
+      border: 1px solid var(--cream-dark);
+      border-radius: 50px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      transition: var(--transition);
+    }
+
+    .value-chip:hover {
+      background: var(--coffee);
+      color: var(--white);
+      border-color: var(--coffee);
+      transform: translateY(-2px);
+    }
+
+    /* PRODUCTS */
+    #menu {
+      background: var(--beige);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .product-img {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.08);
+    }
+
+    /* CSS art for product cards */
+    .product-img-art {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .bottle-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .b-cap {
+      width: 32px;
+      height: 10px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .b-neck {
+      width: 26px;
+      height: 24px;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .b-body {
+      width: 56px;
+      height: 110px;
+      border-radius: 6px 6px 24px 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset -5px 0 10px rgba(0, 0, 0, .15);
+    }
+
+    .b-label {
+      position: absolute;
+      bottom: 14px;
+      background: rgba(255, 255, 255, .92);
+      padding: 3px 5px;
+      border-radius: 2px;
+      font-size: 6.5px;
+      font-weight: 700;
+      color: var(--coffee);
+      text-align: center;
+      width: 48px;
+      line-height: 1.4;
+    }
+
+    /* Gula Aren art */
+    .art-ga .product-img-art {
+      background: linear-gradient(155deg, #fdf0d5, #f0d890);
+    }
+
+    .art-ga .b-body {
+      background: linear-gradient(135deg, #b07020, #d4943a);
+    }
+
+    .art-ga .b-neck {
+      background: #8b5e18;
+    }
+
+    .art-ga .b-cap {
+      background: #5a3d10;
+    }
+
+    /* Caramel art */
+    .art-ca .product-img-art {
+      background: linear-gradient(155deg, #fef5dc, #fde8a5);
+    }
+
+    .art-ca .b-body {
+      background: linear-gradient(135deg, #d4a017, #e8c040);
+    }
+
+    .art-ca .b-neck {
+      background: #a07018;
+    }
+
+    .art-ca .b-cap {
+      background: #6a4a10;
+    }
+
+    /* Hazelnut art */
+    .art-ha .product-img-art {
+      background: linear-gradient(155deg, #f5e8d5, #e8d0b0);
+    }
+
+    .art-ha .b-body {
+      background: linear-gradient(135deg, #8b6040, #a87850);
+    }
+
+    .art-ha .b-neck {
+      background: #6a4828;
+    }
+
+    .art-ha .b-cap {
+      background: #4a3018;
+    }
+
+    /* Kopi Hitam art */
+    .art-kh .product-img-art {
+      background: linear-gradient(155deg, #2a1208, #3b1f0e);
+    }
+
+    .art-kh .b-body {
+      background: linear-gradient(135deg, #1a1005, #2a1a08);
+    }
+
+    .art-kh .b-neck {
+      background: #120a02;
+    }
+
+    .art-kh .b-cap {
+      background: #080402;
+    }
+
+    .art-kh .b-label {
+      background: rgba(245, 239, 230, .92);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--caramel);
+      color: var(--white);
+      font-size: .66rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+      letter-spacing: .05em;
+    }
+
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--coffee);
+      margin-bottom: 6px;
+    }
+
+    .product-desc {
+      font-size: .83rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .product-price {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--coffee);
+    }
+
+    .product-price span {
+      font-size: .7rem;
+      font-weight: 400;
+      color: var(--text-light);
+      display: block;
+      font-family: var(--font-sans);
+    }
+
+    .btn-pesan {
+      padding: 9px 18px;
+      background: var(--coffee);
+      color: var(--white);
+      border-radius: 50px;
+      font-size: .83rem;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .btn-pesan:hover {
+      background: var(--caramel);
+      transform: scale(1.04);
+    }
+
+    /* WHY US */
+    #why-us {
+      background: var(--coffee);
+      overflow: hidden;
+    }
+
+    #why-us .section-title {
+      color: var(--cream);
+    }
+
+    #why-us .tag {
+      color: var(--caramel);
+    }
+
+    #why-us .section-sub {
+      color: rgba(245, 239, 230, .7);
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .why-header .section-sub {
+      margin: 0 auto;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--caramel), #e0a840);
+      transform: scaleX(0);
+      transition: transform .4s ease;
+    }
+
+    .why-card:hover {
+      background: rgba(255, 255, 255, .1);
+      transform: translateY(-8px);
+      border-color: rgba(200, 136, 42, .4);
+    }
+
+    .why-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(200, 136, 42, .15);
+      border: 1px solid rgba(200, 136, 42, .3);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.6rem;
+      transition: var(--transition);
+    }
+
+    .why-card:hover .why-icon {
+      background: rgba(200, 136, 42, .25);
+      transform: scale(1.1) rotate(-3deg);
+    }
+
+    .why-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .why-desc {
+      font-size: .85rem;
+      color: rgba(245, 239, 230, .6);
+      line-height: 1.7;
+    }
+
+    /* DIGITAL MARKETING */
+    #digital-marketing {
+      background: var(--white);
+    }
+
+    .dm-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .dm-header .section-sub {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .dm-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .dm-card {
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: var(--transition);
+      border: 1px solid var(--cream-dark);
+      background: var(--beige);
+    }
+
+    .dm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .dm-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .dm-tiktok .dm-icon-wrap {
+      background: linear-gradient(135deg, #010101, #69C9D0);
+    }
+
+    .dm-ig .dm-icon-wrap {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    }
+
+    .dm-wa .dm-icon-wrap {
+      background: linear-gradient(135deg, #25d366, #128C7E);
+    }
+
+    .dm-mp .dm-icon-wrap {
+      background: linear-gradient(135deg, #ff6900, #ff9900);
+    }
+
+    .dm-platform {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 4px;
+    }
+
+    .dm-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--coffee);
+      margin-bottom: 8px;
+    }
+
+    .dm-desc {
+      font-size: .85rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .dm-cta-wrap {
+      text-align: center;
+    }
+
+    /* FUNNEL */
+    #funnel {
+      background: var(--beige);
+    }
+
+    .funnel-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .funnel-header .section-sub {
+      margin: 0 auto;
+    }
+
+    .funnel-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .funnel-step {
+      width: 100%;
+    }
+
+    .funnel-step-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 28px;
+      border-radius: 12px;
+      margin: 0 auto;
+      transition: var(--transition);
+      cursor: default;
+    }
+
+    .funnel-step:nth-child(1) .funnel-step-inner {
+      background: var(--coffee);
+      width: 100%;
+    }
+
+    .funnel-step:nth-child(3) .funnel-step-inner {
+      background: var(--coffee-mid);
+      width: 88%;
+    }
+
+    .funnel-step:nth-child(5) .funnel-step-inner {
+      background: #7a4525;
+      width: 76%;
+    }
+
+    .funnel-step:nth-child(7) .funnel-step-inner {
+      background: var(--coffee-light);
+      width: 64%;
+    }
+
+    .funnel-step:nth-child(9) .funnel-step-inner {
+      background: var(--caramel);
+      width: 52%;
+    }
+
+    .funnel-step-inner:hover {
+      filter: brightness(1.1);
+      transform: scale(1.02);
+    }
+
+    .funnel-num {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .25);
+      flex-shrink: 0;
+      width: 36px;
+    }
+
+    .funnel-content {
+      flex: 1;
+    }
+
+    .funnel-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .65);
+      margin-bottom: 2px;
+    }
+
+    .funnel-title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .funnel-desc {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .75);
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+    .funnel-arrow {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+      color: var(--text-light);
+      font-size: 1.2rem;
+    }
+
+    /* TARGET */
+    #target {
+      background: var(--coffee);
+      overflow: hidden;
+    }
+
+    .target-inner {
+      text-align: center;
+    }
+
+    #target .tag {
+      color: var(--caramel);
+    }
+
+    .big-number {
+      font-family: var(--font-serif);
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--caramel), #f0c060, var(--caramel));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 8px 0 4px;
+      line-height: 1;
+    }
+
+    .big-sub {
+      font-size: 1rem;
+      color: rgba(245, 239, 230, .7);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .target-desc {
+      max-width: 620px;
+      margin: 0 auto 48px;
+      font-size: 1rem;
+      color: rgba(245, 239, 230, .75);
+      line-height: 1.8;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .stat-item {
+      padding: 28px 40px;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--caramel);
+    }
+
+    .stat-lbl {
+      font-size: .78rem;
+      color: rgba(245, 239, 230, .6);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 4px;
+    }
+
+    .target-note {
+      font-size: .78rem;
+      color: rgba(245, 239, 230, .4);
+      font-style: italic;
+    }
+
+    /* CHANNELS */
+    #channels {
+      background: var(--white);
+    }
+
+    .channels-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .channel-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 28px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--cream-dark);
+      background: var(--beige);
+      transition: var(--transition);
+      gap: 12px;
+    }
+
+    .channel-card:hover {
+      background: var(--coffee);
+      border-color: var(--coffee);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .channel-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      transition: var(--transition);
+    }
+
+    .channel-card:hover .channel-icon {
+      background: rgba(255, 255, 255, .15);
+    }
+
+    .channel-name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    .channel-card:hover .channel-name {
+      color: var(--cream);
+    }
+
+    .channel-desc {
+      font-size: .78rem;
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .channel-card:hover .channel-desc {
+      color: rgba(245, 239, 230, .7);
+    }
+
+    /* TESTIMONIALS */
+    #testimonials {
+      background: var(--beige);
+    }
+
+    .testi-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testi-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--caramel), #e0a840);
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      transform: scaleX(0);
+      transition: transform .4s ease;
+    }
+
+    .testi-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .testi-quote {
+      font-size: 3rem;
+      color: var(--cream-dark);
+      font-family: var(--font-serif);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .testi-stars {
+      font-size: .9rem;
+      margin-bottom: 14px;
+    }
+
+    .testi-text {
+      font-size: .95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .av-1 {
+      background: linear-gradient(135deg, var(--coffee), var(--coffee-light));
+    }
+
+    .av-2 {
+      background: linear-gradient(135deg, #7a3f1c, #c8882a);
+    }
+
+    .av-3 {
+      background: linear-gradient(135deg, #3b1f0e, #6b3a1f);
+    }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: .9rem;
+      color: var(--text-dark);
+    }
+
+    .testi-role {
+      font-size: .75rem;
+      color: var(--text-light);
+    }
+
+    /* CTA */
+    #cta {
+      background: linear-gradient(135deg, var(--caramel) 0%, #b07020 100%);
+      text-align: center;
+      padding: 96px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #cta::before {
+      content: '☕';
+      position: absolute;
+      font-size: 18rem;
+      opacity: .05;
+      top: -40px;
+      left: -60px;
+      pointer-events: none;
+    }
+
+    #cta::after {
+      content: '☕';
+      position: absolute;
+      font-size: 14rem;
+      opacity: .05;
+      bottom: -30px;
+      right: -40px;
+      pointer-events: none;
+    }
+
+    .cta-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, .85);
+      margin-bottom: 36px;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--caramel);
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .95rem;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, .6);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .95rem;
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, .15);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT */
+    #contact {
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border-radius: var(--radius);
+      background: var(--beige);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      background: var(--cream-dark);
+      transform: translateX(4px);
+    }
+
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--coffee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-label {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .contact-item-val {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: .9rem;
+    }
+
+    .contact-form-wrap {
+      background: var(--beige);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .form-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--coffee);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--cream-dark);
+      border-radius: var(--radius);
+      background: var(--white);
+      font-family: var(--font-sans);
+      font-size: .9rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--coffee-light);
+      box-shadow: 0 0 0 3px rgba(160, 101, 42, .12);
+    }
+
+    .form-group input.error,
+    .form-group textarea.error {
+      border-color: #e05050;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-error {
+      font-size: .75rem;
+      color: #e05050;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 18px;
+      background: rgba(37, 211, 102, .1);
+      border-radius: var(--radius);
+      border: 1px solid rgba(37, 211, 102, .25);
+      color: #1a7a42;
+      font-weight: 600;
+      margin-top: 14px;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--coffee);
+      color: var(--white);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: var(--transition);
+      margin-top: 4px;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-sans);
+    }
+
+    .btn-submit:hover {
+      background: var(--caramel);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200, 136, 42, .3);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a0c04;
+      color: rgba(245, 239, 230, .7);
+      padding: 60px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand .logo-tag {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .brand-desc {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: rgba(245, 239, 230, .5);
+      max-width: 280px;
+    }
+
+    .footer-col-title {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: .88rem;
+      color: rgba(245, 239, 230, .55);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--caramel);
+      padding-left: 4px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--caramel);
+      border-color: var(--caramel);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: .8rem;
+      color: rgba(245, 239, 230, .35);
+    }
+
+    .footer-tagline {
+      font-size: .8rem;
+      font-style: italic;
+      color: rgba(245, 239, 230, .3);
+    }
+
+    /* SCROLL TOP */
+    #scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 46px;
+      height: 46px;
+      background: var(--coffee);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: var(--transition);
+      z-index: 999;
+      border: none;
+    }
+
+    #scroll-top.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #scroll-top:hover {
+      background: var(--caramel);
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-img-wrap {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-pad {
+        padding: 64px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-burger {
+        display: flex;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+        padding: 40px 0;
+      }
+
+      .hero-content {
+        order: 2;
+      }
+
+      .hero-visual {
+        order: 1;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-desc {
+        margin: 0 auto 36px;
+      }
+
+      .hero-img-wrap img {
+        width: 220px;
+      }
+
+      .dm-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .channels-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .stats-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        width: 100%;
+      }
+
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+
+      .about-badge-float {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav id="navbar" role="navigation" aria-label="Navigasi utama">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#home" class="nav-logo" aria-label="Kopi Afdhal">
+            <span class="nav-logo-name">KOPI AFDHAL</span>
+            <span class="nav-logo-tag">Premium Coffee Milk</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#digital-marketing">Digital</a></li>
+            <li><a href="#target">Target</a></li>
+            <li><a href="#contact" class="nav-cta">Pesan Sekarang</a></li>
+          </ul>
+          <button class="nav-burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">🏠 Home</a>
+        <a href="#about">📖 About</a>
+        <a href="#menu">☕ Menu</a>
+        <a href="#why-us">⭐ Why Us</a>
+        <a href="#digital-marketing">📱 Digital Marketing</a>
+        <a href="#target">🎯 Target Bisnis</a>
+        <a href="#contact">✉️ Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" aria-label="Hero">
+    <span class="coffee-bean bean-1" aria-hidden="true">☕</span>
+    <span class="coffee-bean bean-2" aria-hidden="true">🫘</span>
+    <span class="coffee-bean bean-3" aria-hidden="true">☕</span>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            <span>Kopi Susu Botolan Premium</span>
+          </div>
+          <h1 class="hero-title">KOPI<br><span class="accent">AFDHAL</span></h1>
+          <p class="hero-tagline">"Kopi Enak, Harga Bersahabat."</p>
+          <p class="hero-desc">Kopi susu botolan yang dirancang untuk menemani aktivitasmu. Nikmati rasa kopi yang
+            nikmat, praktis, dan terjangkau kapan saja.</p>
+          <div class="hero-btns">
+            <a href="#menu" class="btn-gold" id="btn-lihat-menu">☕ Lihat Menu</a>
+            <a href="#contact" class="btn-ghost" id="btn-pesan-hero">Pesan Sekarang →</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">4+</div>
+              <div class="hero-stat-label">Varian Rasa</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Bahan Pilihan</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">Rp15K</div>
+              <div class="hero-stat-label">Mulai Dari</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <div class="hero-img-wrap">
+            <img src="hero.jpg" alt="Botol Kopi Afdhal Premium Coffee Milk" loading="eager"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div
+              style="display:none;flex-direction:column;align-items:center;justify-content:center;width:280px;height:380px;background:rgba(200,136,42,.1);border-radius:20px;border:1px solid rgba(200,136,42,.3);">
+              <div style="font-size:4rem;margin-bottom:12px;">☕</div>
+              <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--caramel);font-weight:700;">KOPI
+                AFDHAL</div>
+              <div style="font-size:.85rem;color:rgba(245,239,230,.6);margin-top:6px;">Premium Coffee Milk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-pad" aria-label="Tentang Kopi Afdhal">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <div class="about-img-bg"></div>
+          <img src="KOPI_GULA_AREN.png" alt="Kopi Afdhal Gula Aren" class="about-img-main" loading="lazy"
+            onerror="this.style.display='none';" />
+          <div class="about-badge-float">
+            <span class="big-num">Rp15K</span>
+            <span class="small-text">Mulai Dari</span>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <p class="tag">Tentang Kami</p>
+          <h2 class="section-title">Tentang<br>Kopi Afdhal</h2>
+          <p class="section-sub" style="margin-bottom:16px;">Kopi Afdhal merupakan brand kopi susu botolan yang hadir
+            untuk memberikan pengalaman menikmati kopi yang praktis, enak, dan terjangkau. Kami percaya bahwa menikmati
+            kopi berkualitas tidak harus mahal dan dapat menjadi bagian dari aktivitas sehari-hari.</p>
+          <p style="font-size:.9rem;color:var(--text-light);line-height:1.8;margin-bottom:28px;">Dibuat dengan bahan
+            pilihan dan dikemas secara higienis dalam botol yang praktis, Kopi Afdhal siap menemanimu dari pagi hingga
+            malam, dari kampus hingga tempat kerja.</p>
+          <p class="tag">Nilai Brand Kami</p>
+          <div class="about-values">
+            <span class="value-chip">✓ Quality</span>
+            <span class="value-chip">✓ Affordable</span>
+            <span class="value-chip">✓ Practical</span>
+            <span class="value-chip">✓ Youthful</span>
+            <span class="value-chip">✓ Consistent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="menu" class="section-pad" aria-label="Menu produk">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:8px;" class="reveal">
+        <p class="tag">Menu Pilihan</p>
+        <h2 class="section-title">Varian Rasa Favorit</h2>
+        <p class="section-sub" style="margin:0 auto;">Tersedia dalam 4 varian rasa dari bahan pilihan berkualitas,
+          dikemas praktis dalam botol siap minum.</p>
+      </div>
+      <div class="products-grid">
+
+        <article class="product-card reveal delay-1" aria-label="Kopi Susu Gula Aren">
+          <div class="product-img">
+            <img src="KOPI_GULA_AREN.png" alt="Kopi Susu Gula Aren" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.classList.add('art-ga');this.parentElement.innerHTML+='<div class=\'product-img-art art-ga\'><div class=\'bottle-wrap\'><div class=\'b-cap\'></div><div class=\'b-neck\'></div><div class=\'b-body\'><div class=\'b-label\'>KOPI AFDHAL Gula Aren</div></div></div></div>';" />
+            <span class="product-badge">Best Seller</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kopi Susu Gula Aren</h3>
+            <p class="product-desc">Kopi susu creamy dengan perpaduan gula aren yang manis dan aroma kopi yang kuat.</p>
+            <div class="product-footer">
+              <div class="product-price">Rp15.000<span>per botol 250ml</span></div>
+              <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="btn-pesan" target="_blank"
+                rel="noopener">Pesan</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal delay-2" aria-label="Kopi Susu Caramel">
+          <div class="product-img art-ca">
+            <img src="KOPI_CARAMEL.png" alt="Kopi Susu Caramel" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.classList.add('art-ca');this.parentElement.innerHTML+='<div class=\'product-img-art art-ca\'><div class=\'bottle-wrap\'><div class=\'b-cap\'></div><div class=\'b-neck\'></div><div class=\'b-body\'><div class=\'b-label\'>KOPI AFDHAL Caramel</div></div></div></div>';" />
+            <div class="product-img-art art-ca">
+              <div class="bottle-wrap">
+                <div class="b-cap"></div>
+                <div class="b-neck"></div>
+                <div class="b-body">
+                  <div class="b-label">KOPI AFDHAL Caramel</div>
+                </div>
+              </div>
+            </div>
+            <span class="product-badge">Favorit</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kopi Susu Caramel</h3>
+            <p class="product-desc">Perpaduan kopi susu dengan rasa caramel yang lembut dan manis.</p>
+            <div class="product-footer">
+              <div class="product-price">Rp17.000<span>per botol 250ml</span></div>
+              <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="btn-pesan" target="_blank"
+                rel="noopener">Pesan</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal delay-3" aria-label="Kopi Susu Hazelnut">
+          <div class="product-img art-ha">
+            <img src="KOPI_HAZELNUT.png" alt="Kopi Susu Hazelnut" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.classList.add('art-ha');this.parentElement.innerHTML+='<div class=\'product-img-art art-ha\'><div class=\'bottle-wrap\'><div class=\'b-cap\'></div><div class=\'b-neck\'></div><div class=\'b-body\'><div class=\'b-label\'>KOPI AFDHAL Hazelnut</div></div></div></div>';" />
+            <div class="product-img-art art-ha">
+              <div class="bottle-wrap">
+                <div class="b-cap"></div>
+                <div class="b-neck"></div>
+                <div class="b-body">
+                  <div class="b-label">KOPI AFDHAL Hazelnut</div>
+                </div>
+              </div>
+            </div>
+            <span class="product-badge">New!</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kopi Susu Hazelnut</h3>
+            <p class="product-desc">Kopi susu dengan aroma hazelnut yang khas dan rasa yang creamy.</p>
+            <div class="product-footer">
+              <div class="product-price">Rp17.000<span>per botol 250ml</span></div>
+              <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="btn-pesan" target="_blank"
+                rel="noopener">Pesan</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal delay-4" aria-label="Kopi Hitam">
+          <div class="product-img art-kh">
+            <img src="KOPI_HITAM.png" alt="Kopi Susu Kopi Hitam" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.classList.add('art-kh');this.parentElement.innerHTML+='<div class=\'product-img-art art-kh\'><div class=\'bottle-wrap\'><div class=\'b-cap\'></div><div class=\'b-neck\'></div><div class=\'b-body\'><div class=\'b-label\'>KOPI AFDHAL Kopi hitam/div></div></div></div>';" />
+            <div class="product-img-art art-kh">
+              <div class="bottle-wrap">
+                <div class="b-cap"></div>
+                <div class="b-neck"></div>
+                <div class="b-body">
+                  <div class="b-label">KOPI AFDHAL Hitam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Kopi Hitam</h3>
+            <p class="product-desc">Kopi dengan cita rasa lebih kuat untuk pecinta kopi klasik.</p>
+            <div class="product-footer">
+              <div class="product-price">Rp15.000<span>per botol 250ml</span></div>
+              <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="btn-pesan" target="_blank"
+                rel="noopener">Pesan</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section id="why-us" class="section-pad" aria-label="Keunggulan Kopi Afdhal">
+    <div class="container">
+      <div class="why-header reveal">
+        <p class="tag">Keunggulan Kami</p>
+        <h2 class="section-title">Kenapa Kopi Afdhal?</h2>
+        <p class="section-sub">Kami hadir bukan hanya untuk menjual kopi, tapi untuk memberikan pengalaman ngopi yang
+          berkesan — enak, hemat, dan gampang.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal delay-1">
+          <div class="why-icon">🏆</div>
+          <h3 class="why-title">Rasa Berkualitas</h3>
+          <p class="why-desc">Menggunakan bahan pilihan untuk menghasilkan rasa kopi yang nikmat dan konsisten di setiap
+            botol.</p>
+        </div>
+        <div class="why-card reveal delay-2">
+          <div class="why-icon">💰</div>
+          <h3 class="why-title">Harga Bersahabat</h3>
+          <p class="why-desc">Harga dibuat terjangkau untuk mahasiswa dan anak muda. Kopi enak tidak harus menguras
+            kantong.</p>
+        </div>
+        <div class="why-card reveal delay-3">
+          <div class="why-icon">🧳</div>
+          <h3 class="why-title">Praktis</h3>
+          <p class="why-desc">Dikemas dalam botol sehingga mudah dibawa dan dinikmati kapan saja — di kampus, kantor,
+            atau perjalanan.</p>
+        </div>
+        <div class="why-card reveal delay-4">
+          <div class="why-icon">🔥</div>
+          <h3 class="why-title">Cocok untuk Anak Muda</h3>
+          <p class="why-desc">Brand dan komunikasi dibuat dekat dengan gaya hidup generasi muda yang dinamis dan aktif.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIGITAL MARKETING ===== -->
+  <section id="digital-marketing" class="section-pad" aria-label="Strategi Digital Marketing">
+    <div class="container">
+      <div class="dm-header reveal">
+        <p class="tag">Strategi Digital</p>
+        <h2 class="section-title">Kopi Afdhal Goes Digital</h2>
+        <p class="section-sub">Kopi Afdhal memanfaatkan kekuatan digital marketing untuk menjangkau lebih banyak
+          pelanggan dan membangun brand yang kuat di era digital.</p>
+      </div>
+      <div class="dm-grid">
+        <div class="dm-card dm-tiktok reveal delay-1">
+          <div class="dm-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.94a8.17 8.17 0 004.78 1.52V7.01a4.85 4.85 0 01-1.01-.32z" />
+            </svg>
+          </div>
+          <div>
+            <p class="dm-platform">TikTok</p>
+            <h3 class="dm-title">Konten Video Kreatif</h3>
+            <p class="dm-desc">Konten video pendek, konten relatable, review produk, dan promo menarik untuk menjangkau
+              audiens yang lebih luas.</p>
+          </div>
+        </div>
+        <div class="dm-card dm-ig reveal delay-2">
+          <div class="dm-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="dm-platform">Instagram</p>
+            <h3 class="dm-title">Branding Visual Premium</h3>
+            <p class="dm-desc">Branding, foto produk, story, reels, dan testimoni pelanggan untuk membangun kepercayaan
+              dan estetika brand.</p>
+          </div>
+        </div>
+        <div class="dm-card dm-wa reveal delay-3">
+          <div class="dm-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M11.996 0C5.372 0 0 5.373 0 12.001a11.968 11.968 0 001.66 6.127L.058 23.9l5.93-1.554A11.959 11.959 0 0012 24c6.627 0 12-5.373 12-12S18.623 0 11.996 0zm.004 21.818a9.833 9.833 0 01-5.027-1.382l-.36-.215-3.73.978.998-3.64-.234-.374A9.862 9.862 0 012.18 12c0-5.418 4.408-9.818 9.82-9.818 5.418 0 9.82 4.4 9.82 9.818 0 5.418-4.402 9.818-9.82 9.818z" />
+            </svg>
+          </div>
+          <div>
+            <p class="dm-platform">WhatsApp</p>
+            <h3 class="dm-title">Layanan & Pemesanan</h3>
+            <p class="dm-desc">Pemesanan langsung, customer service responsif, promo eksklusif, dan program repeat order
+              yang memudahkan pelanggan.</p>
+          </div>
+        </div>
+        <div class="dm-card dm-mp reveal delay-4">
+          <div class="dm-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+          </div>
+          <div>
+            <p class="dm-platform">Marketplace / Delivery</p>
+            <h3 class="dm-title">Belanja Online Mudah</h3>
+            <p class="dm-desc">Mempermudah pelanggan melakukan pembelian secara online melalui berbagai platform
+              marketplace dan layanan delivery.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dm-cta-wrap reveal">
+        <a href="#contact" class="btn btn-primary" id="btn-follow">☕ Follow Perjalanan Kopi Afdhal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNNEL ===== -->
+  <section id="funnel" class="section-pad" aria-label="Marketing Funnel">
+    <div class="container">
+      <div class="funnel-header reveal">
+        <p class="tag">Marketing Funnel</p>
+        <h2 class="section-title">Perjalanan Pelanggan<br>Kopi Afdhal</h2>
+        <p class="section-sub">Strategi pemasaran yang mengubah orang yang belum mengenal menjadi pelanggan setia Kopi
+          Afdhal.</p>
+      </div>
+      <div class="funnel-wrap">
+        <div class="funnel-step reveal delay-1">
+          <div class="funnel-step-inner">
+            <div class="funnel-num">01</div>
+            <div class="funnel-content">
+              <p class="funnel-label">Tahap 1</p>
+              <h3 class="funnel-title">🔍 AWARENESS</h3>
+              <p class="funnel-desc">Orang mengenal Kopi Afdhal melalui TikTok dan Instagram.</p>
+            </div>
+          </div>
+        </div>
+        <div class="funnel-arrow reveal delay-1">▼</div>
+        <div class="funnel-step reveal delay-2">
+          <div class="funnel-step-inner">
+            <div class="funnel-num">02</div>
+            <div class="funnel-content">
+              <p class="funnel-label">Tahap 2</p>
+              <h3 class="funnel-title">💡 INTEREST</h3>
+              <p class="funnel-desc">Calon pelanggan tertarik melihat produk, harga, dan konten.</p>
+            </div>
+          </div>
+        </div>
+        <div class="funnel-arrow reveal delay-2">▼</div>
+        <div class="funnel-step reveal delay-3">
+          <div class="funnel-step-inner">
+            <div class="funnel-num">03</div>
+            <div class="funnel-content">
+              <p class="funnel-label">Tahap 3</p>
+              <h3 class="funnel-title">🤔 CONSIDERATION</h3>
+              <p class="funnel-desc">Calon pelanggan melihat menu dan testimoni pelanggan lain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="funnel-arrow reveal delay-3">▼</div>
+        <div class="funnel-step reveal delay-4">
+          <div class="funnel-step-inner">
+            <div class="funnel-num">04</div>
+            <div class="funnel-content">
+              <p class="funnel-label">Tahap 4</p>
+              <h3 class="funnel-title">🛒 PURCHASE</h3>
+              <p class="funnel-desc">Pelanggan melakukan pembelian melalui WhatsApp atau platform online.</p>
+            </div>
+          </div>
+        </div>
+        <div class="funnel-arrow reveal delay-4">▼</div>
+        <div class="funnel-step reveal delay-5">
+          <div class="funnel-step-inner">
+            <div class="funnel-num">05</div>
+            <div class="funnel-content">
+              <p class="funnel-label">Tahap 5</p>
+              <h3 class="funnel-title">❤️ LOYALTY</h3>
+              <p class="funnel-desc">Pelanggan melakukan repeat order dan merekomendasikan Kopi Afdhal kepada orang
+                lain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TARGET BISNIS ===== -->
+  <section id="target" class="section-pad" aria-label="Target bisnis">
+    <div class="container">
+      <div class="target-inner">
+        <p class="tag reveal">Our Business Goal</p>
+        <h2 class="section-title reveal" style="color:var(--white);">Target Bisnis Tahun Pertama</h2>
+        <div class="big-number reveal" id="bigNumber">Rp1 Miliar</div>
+        <p class="big-sub reveal">Target Omzet Tahun Pertama</p>
+        <p class="target-desc reveal">Kopi Afdhal menargetkan omzet Rp1 miliar dalam satu bulan melalui kombinasi
+          penjualan langsung, penjualan online, reseller, kerja sama dengan kampus dan perkantoran, serta pengembangan
+          kemitraan.</p>
+        <div class="stats-row reveal">
+          <div class="stat-item">
+            <div class="stat-num" id="stat1">66.667+</div>
+            <div class="stat-lbl">Target Botol per Tahun</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="stat2">5.556</div>
+            <div class="stat-lbl">Target Botol per Bulan</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="stat3">185+</div>
+            <div class="stat-lbl">Target Botol per Hari</div>
+          </div>
+        </div>
+        <p class="target-note reveal">* Angka merupakan target proyeksi bisnis dan dapat berubah berdasarkan kondisi
+          pasar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHANNELS ===== -->
+  <section id="channels" class="section-pad" aria-label="Channel penjualan">
+    <div class="container">
+      <div class="channels-header reveal">
+        <p class="tag">Temukan Kami</p>
+        <h2 class="section-title">Where to Find Us</h2>
+        <p class="section-sub" style="margin:0 auto;">Kopi Afdhal tersedia di berbagai channel untuk memudahkan kamu
+          mendapatkan kopi favoritmu.</p>
+      </div>
+      <div class="channels-grid">
+        <div class="channel-card reveal delay-1">
+          <div class="channel-icon">🏪</div>
+          <div class="channel-name">Booth / Outlet</div>
+          <div class="channel-desc">Kunjungi booth kami langsung</div>
+        </div>
+        <div class="channel-card reveal delay-1">
+          <div class="channel-icon">💬</div>
+          <div class="channel-name">WhatsApp</div>
+          <div class="channel-desc">Pesan langsung via chat</div>
+        </div>
+        <div class="channel-card reveal delay-2">
+          <div class="channel-icon">📸</div>
+          <div class="channel-name">Instagram</div>
+          <div class="channel-desc">@kopiafdhal</div>
+        </div>
+        <div class="channel-card reveal delay-2">
+          <div class="channel-icon">🎵</div>
+          <div class="channel-name">TikTok</div>
+          <div class="channel-desc">@kopiafdhal</div>
+        </div>
+        <div class="channel-card reveal delay-3">
+          <div class="channel-icon">🛒</div>
+          <div class="channel-name">Marketplace</div>
+          <div class="channel-desc">Tokopedia & Shopee</div>
+        </div>
+        <div class="channel-card reveal delay-3">
+          <div class="channel-icon">🤝</div>
+          <div class="channel-name">Reseller</div>
+          <div class="channel-desc">Bergabung jadi reseller</div>
+        </div>
+        <div class="channel-card reveal delay-4">
+          <div class="channel-icon">🔗</div>
+          <div class="channel-name">Kemitraan</div>
+          <div class="channel-desc">Program mitra bisnis</div>
+        </div>
+        <div class="channel-card reveal delay-4">
+          <div class="channel-icon">🏫</div>
+          <div class="channel-name">Kantin Kampus</div>
+          <div class="channel-desc">Tersedia di area kampus</div>
+        </div>
+        <div class="channel-card reveal delay-5">
+          <div class="channel-icon">🏢</div>
+          <div class="channel-name">Perkantoran</div>
+          <div class="channel-desc">Kerjasama dengan kantor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section-pad" aria-label="Testimoni pelanggan">
+    <div class="container">
+      <div class="testi-header reveal">
+        <p class="tag">Testimoni Pelanggan</p>
+        <h2 class="section-title">Kata Mereka</h2>
+        <p class="section-sub" style="margin:0 auto;">Kepuasan pelanggan adalah prioritas utama kami. Dengarkan apa yang
+          mereka katakan.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal delay-1">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">Rasanya enak dan nggak terlalu manis. Cocok banget buat nemenin nugas. Jadi langganan
+            sekarang!</p>
+          <div class="testi-author">
+            <div class="testi-avatar av-1">A</div>
+            <div>
+              <div class="testi-name">Adri</div>
+              <div class="testi-role">Mahasiswa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-2">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">Packaging-nya praktis dan harganya masih ramah di kantong. Suka banget sama varian gula
+            arennya!</p>
+          <div class="testi-author">
+            <div class="testi-avatar av-2">R</div>
+            <div>
+              <div class="testi-name">Rina</div>
+              <div class="testi-role">Mahasiswi</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-3">
+          <div class="testi-quote">"</div>
+          <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testi-text">Kopinya cocok diminum saat kerja. Rasanya ringan tapi tetap terasa kopinya. Highly
+            recommended!</p>
+          <div class="testi-author">
+            <div class="testi-avatar av-3">D</div>
+            <div>
+              <div class="testi-name">Dimas</div>
+              <div class="testi-role">Pekerja</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="cta" aria-label="Call to action">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="reveal">
+        <h2 class="cta-title">Siap Ngopi Bareng<br>Kopi Afdhal?</h2>
+        <p class="cta-sub">Temani aktivitasmu dengan kopi yang enak, praktis, dan bersahabat.</p>
+        <div class="cta-btns">
+          <a href="#contact" class="btn-white" id="btn-pesan-cta">☕ Pesan Sekarang</a>
+          <a href="https://www.instagram.com/afdhal045/" class="btn-outline-white" target="_blank" rel="noopener"
+            id="btn-ig-cta">📸 Instagram Kami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section-pad" aria-label="Kontak">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal-left">
+          <p class="tag">Hubungi Kami</p>
+          <h2 class="section-title">KOPI AFDHAL</h2>
+          <p class="section-sub">Ada pertanyaan atau mau pesan? Hubungi kami melalui channel di bawah ini. Kami siap
+            melayani!</p>
+          <div class="contact-items">
+            <a href="mailto:info@kopiafdhal.com" class="contact-item" aria-label="Email">
+              <div class="contact-item-icon">✉️</div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-val">info@kopiafdhal.com</div>
+              </div>
+            </a>
+            <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="contact-item" target="_blank"
+              rel="noopener" aria-label="WhatsApp">
+              <div class="contact-item-icon">💬</div>
+              <div>
+                <div class="contact-item-label">WhatsApp</div>
+                <div class="contact-item-val">+62 876-5432-1000</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/afdhal045/" class="contact-item" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <div class="contact-item-icon">📸</div>
+              <div>
+                <div class="contact-item-label">Instagram</div>
+                <div class="contact-item-val">@kopiafdhal</div>
+              </div>
+            </a>
+            <a href="https://tiktok.com/@kopiafdhal" class="contact-item" target="_blank" rel="noopener"
+              aria-label="TikTok">
+              <div class="contact-item-icon">🎵</div>
+              <div>
+                <div class="contact-item-label">TikTok</div>
+                <div class="contact-item-val">@kopiafdhal</div>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div>
+                <div class="contact-item-label">Alamat</div>
+                <div class="contact-item-val">Indonesia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <h3 class="form-title">Kirim Pesan</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nama">Nama Lengkap *</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" autocomplete="name" />
+              <span class="form-error" id="namaError">Nama wajib diisi (min. 2 karakter).</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Alamat Email *</label>
+              <input type="email" id="email" name="email" placeholder="contoh@email.com" autocomplete="email" />
+              <span class="form-error" id="emailError">Masukkan alamat email yang valid.</span>
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">Nomor WhatsApp *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" autocomplete="tel" />
+              <span class="form-error" id="whatsappError">Nomor WhatsApp wajib diisi.</span>
+            </div>
+            <div class="form-group">
+              <label for="pesan">Pesan *</label>
+              <textarea id="pesan" name="pesan" placeholder="Tulis pesan, pertanyaan, atau pesanan kamu di sini..."
+                rows="4"></textarea>
+              <span class="form-error" id="pesanError">Pesan wajib diisi (min. 5 karakter).</span>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">✉️ Kirim Pesan</button>
+            <div class="form-success" id="formSuccess">✅ Pesan berhasil terkirim! Kami akan segera menghubungi kamu.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-name">KOPI AFDHAL</div>
+          <div class="logo-tag">Premium Coffee Milk</div>
+          <p class="brand-desc">"Kopi Enak, Harga Bersahabat."<br>Kopi susu botolan yang hadir untuk menemani setiap
+            aktivitas anak muda Indonesia dengan rasa yang nikmat dan harga yang terjangkau.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Ikuti Kami</p>
+          <ul class="footer-links" style="margin-bottom:20px;">
+            <li><a href="https://www.instagram.com/afdhal045/" target="_blank" rel="noopener">Instagram @kopiafdhal</a>
+            </li>
+            <li><a href="https://tiktok.com/@kopiafdhal" target="_blank" rel="noopener">TikTok @kopiafdhal</a></li>
+            <li><a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" target="_blank" rel="noopener">WhatsApp
+                Order</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/afdhal045/" class="social-icon" target="_blank" rel="noopener"
+              aria-label="Instagram">📸</a>
+            <a href="https://tiktok.com/@kopiafdhal" class="social-icon" target="_blank" rel="noopener"
+              aria-label="TikTok">🎵</a>
+            <a href="file:///C:/DIGITAL%20MARKETING/LINK_WHATSAPP.html" class="social-icon" target="_blank"
+              rel="noopener" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kopi Afdhal. All Rights Reserved.</p>
+        <p class="footer-tagline">"Kopi Enak, Harga Bersahabat."</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Kembali ke atas">▲</button>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      scrollBtn.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+
+    // Mobile menu
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burgerBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      burgerBtn.classList.toggle('open', open);
+      burgerBtn.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burgerBtn.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    // Scroll to top
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Contact form validation
+    const form = document.getElementById('contactForm');
+    function validate(id, errorId, fn) {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errorId);
+      const ok = fn(el.value.trim());
+      el.classList.toggle('error', !ok);
+      err.classList.toggle('show', !ok);
+      return ok;
+    }
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const ok = [
+        validate('nama', 'namaError', v => v.length >= 2),
+        validate('email', 'emailError', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)),
+        validate('whatsapp', 'whatsappError', v => v.length >= 8),
+        validate('pesan', 'pesanError', v => v.length >= 5)
+      ].every(Boolean);
+      if (ok) {
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = '⏳ Mengirim...'; btn.disabled = true;
+        setTimeout(() => {
+          form.reset();
+          document.getElementById('formSuccess').classList.add('show');
+          btn.textContent = '✉️ Kirim Pesan'; btn.disabled = false;
+          setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 5000);
+        }, 1200);
+      }
+    });
+    ['nama', 'email', 'whatsapp', 'pesan'].forEach(id => {
+      document.getElementById(id).addEventListener('input', function () {
+        this.classList.remove('error');
+        document.getElementById(id + 'Error').classList.remove('show');
+      });
+    });
+
+    // Counter animation
+    function countUp(el, target, suffix, duration) {
+      let start = null;
+      const step = ts => {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(ease * target).toLocaleString('id-ID') + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+    const statsObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          countUp(document.getElementById('stat1'), 66667, '+', 2000);
+          countUp(document.getElementById('stat2'), 5556, '', 1800);
+          countUp(document.getElementById('stat3'), 185, '+', 1500);
+          statsObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsRow = document.querySelector('.stats-row');
+    if (statsRow) statsObserver.observe(statsRow);
+  </script>
+</body>
+
+</html>
